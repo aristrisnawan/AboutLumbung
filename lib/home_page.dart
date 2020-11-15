@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:lumbung/profil.dart';
 
 class HomePage extends StatelessWidget{
 
@@ -23,8 +23,8 @@ class HomePage extends StatelessWidget{
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     new Text("All",style: TextStyle(fontSize: 40,fontWeight:FontWeight.bold,color: Colors.blue,fontFamily: 'Playfair Display'),),
-                    new Text("About",style: TextStyle(fontSize: 40,fontWeight:FontWeight.bold,color: Colors.blue,fontFamily: 'PlayfairDisplay'),),
-                    new Text("Lumbung",style: TextStyle(fontSize: 40,fontWeight:FontWeight.bold,color: Colors.blue,fontFamily: 'PlayfairDisplay'),)
+                    new Text("About",style: TextStyle(fontSize: 40,fontWeight:FontWeight.bold,color: Colors.blue,fontFamily: 'Playfair Display'),),
+                    new Text("Lumbung",style: TextStyle(fontSize: 40,fontWeight:FontWeight.bold,color: Colors.blue,fontFamily: 'Playfair Display'),)
                   ],
                 ),
               ),
@@ -35,18 +35,25 @@ class HomePage extends StatelessWidget{
             child:new Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Card(
-                  color: Colors.grey,
-                  elevation: 10.0,
-                  child: Container(
-                    padding: EdgeInsets.all(32.0),
-                    child: Column(
-                      children: <Widget>[
-                        new Icon(Icons.account_balance),
-                        new Text(""),
-                        new Text("Profil"),
-                        new Text("Lumbung")
-                      ],
+                 FlatButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                        return Profil();
+                    }));
+                },
+                  child: Card(
+                    color: Colors.grey,
+                    elevation: 10.0,
+                    child: Container(
+                      padding: EdgeInsets.all(32.0),
+                      child: Column(
+                        children: <Widget>[
+                          new Icon(Icons.account_balance),
+                          new Text(""),
+                          new Text("Profil"),
+                          new Text("Lumbung")
+                        ],
+                      ),
                     ),
                   ),
                 ),

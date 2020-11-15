@@ -29,6 +29,7 @@ flutter:
 
   assets:
     - images/home_page.jpg
+    - images/lumb.jpg
 
   fonts:
     - family: Playfair Display
