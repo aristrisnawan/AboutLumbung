@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lumbung/profil.dart';
 import 'package:lumbung/location.dart';
+import 'package:lumbung/detail.dart';
 
 class HomePage extends StatelessWidget{
 
@@ -58,18 +59,25 @@ class HomePage extends StatelessWidget{
                     ),
                   ),
                 ),
-                Card(
-                  color: Colors.grey,
-                  elevation: 10.0,
-                  child: Container(
-                    padding: EdgeInsets.all(32.0),
-                    child: Column(
-                      children: <Widget>[
-                        new Icon(Icons.description),
-                        new Text(""),
-                        new Text("Detail"),
-                        new Text("Lumbung")
-                      ],
+                FlatButton(
+                  onPressed: (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context){
+                      return Detail();
+                    }));
+                  },
+                  child: Card(
+                    color: Colors.grey,
+                    elevation: 10.0,
+                    child: Container(
+                      padding: EdgeInsets.all(32.0),
+                      child: Column(
+                        children: <Widget>[
+                          new Icon(Icons.description),
+                          new Text(""),
+                          new Text("Detail"),
+                          new Text("Lumbung")
+                        ],
+                      ),
                     ),
                   ),
                 ),

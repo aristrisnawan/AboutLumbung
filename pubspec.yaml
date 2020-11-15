@@ -31,6 +31,7 @@ flutter:
     - images/home_page.jpg
     - images/lumb.jpg
     - images/location.jpg
+    - images/detail.jpg
 
   fonts:
     - family: Playfair Display
