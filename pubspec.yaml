@@ -30,6 +30,7 @@ flutter:
   assets:
     - images/home_page.jpg
     - images/lumb.jpg
+    - images/location.jpg
 
   fonts:
     - family: Playfair Display

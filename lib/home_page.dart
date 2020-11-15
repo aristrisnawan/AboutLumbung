@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lumbung/profil.dart';
+import 'package:lumbung/location.dart';
 
 class HomePage extends StatelessWidget{
 
@@ -80,18 +81,25 @@ class HomePage extends StatelessWidget{
             child: new Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Card(
-                  color: Colors.grey,
-                  elevation: 10.0,
-                  child: Container(
-                    width: 287,
-                    padding: EdgeInsets.all(32),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        new Icon(Icons.place),
-                        new Text("   Location Lumbung",)
-                      ],
+                FlatButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return Location();
+                    }));
+                  },
+                  child: Card(
+                    color: Colors.grey,
+                    elevation: 10.0,
+                    child: Container(
+                      width: 287,
+                      padding: EdgeInsets.all(32),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          new Icon(Icons.place),
+                          new Text("   Location Lumbung",)
+                        ],
+                      ),
                     ),
                   ),
                 ),
